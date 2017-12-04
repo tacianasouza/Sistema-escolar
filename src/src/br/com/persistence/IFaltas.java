@@ -10,5 +10,5 @@ public interface IFaltas {
 
 	void adicionaFaltas(Faltas falta) throws SQLException;
 	
-	public List<FaltaFinal> listaNotas() throws SQLException;
+	public List<FaltaFinal> listaNotas(int codigo_disciplina, int qtdAulasDia) throws SQLException;
 }
