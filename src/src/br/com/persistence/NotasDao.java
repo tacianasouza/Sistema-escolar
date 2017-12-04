@@ -3,7 +3,9 @@ package src.br.com.persistence;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
+import src.br.com.model.NotaFinal;
 import src.br.com.model.Notas;
 
 public class NotasDao implements INotas {
@@ -29,6 +31,12 @@ public class NotasDao implements INotas {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public List<NotaFinal> listaNotas() throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

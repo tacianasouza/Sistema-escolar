@@ -3,7 +3,9 @@ package src.br.com.persistence;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
+import src.br.com.model.FaltaFinal;
 import src.br.com.model.Faltas;
 
 public class FaltasDao implements IFaltas {
@@ -30,6 +32,12 @@ public class FaltasDao implements IFaltas {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public List<FaltaFinal> listaNotas() throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
