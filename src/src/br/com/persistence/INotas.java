@@ -9,6 +9,6 @@ import src.br.com.model.Notas;
 public interface INotas {
 	public void adicionaNotas(Notas notas) throws SQLException;
 	
-	public List<NotaFinal> listaNotas() throws SQLException;
+	public List<NotaFinal> listaNotas(int codigo_disciplina) throws SQLException;
 
 }
