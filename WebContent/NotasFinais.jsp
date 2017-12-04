@@ -14,7 +14,7 @@
 		int codigo_disciplina =  4203020;//Integer.parseInt(request.getParameter("codigo_disciplina"));
 		List<NotaFinal> lista = fndao.carregaFunctionNotas(codigo_disciplina);*/
 	%>
-	<div id="notas" align="center">
+	<div id="ListaNotas" align="center">
 		<table>
 			<c:forEach var="nf" items="<%=//lista%>">
 				<tr>

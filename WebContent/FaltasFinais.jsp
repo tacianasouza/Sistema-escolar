@@ -15,7 +15,7 @@
 		int qtdAulasDia = Integer.parseInt(request.getParameter("qtdAulasDia"));
 		List<FaltaFinal> lista = fndao.carregaFunctionFaltas(codigo_disciplina, qtdAulasDia);*/
 	%>
-	<div id="faltas" align="center">
+	<div id="ListaFaltas" align="center">
 		<table>
 			<c:forEach var="ff" items="<%=//lista%>">>
 				<tr>
