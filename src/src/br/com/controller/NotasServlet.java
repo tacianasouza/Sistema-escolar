@@ -2,6 +2,7 @@ package src.br.com.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import src.br.com.model.Notas;
+import src.br.com.model.NotaFinal;
 import src.br.com.persistence.INotas;
 import src.br.com.persistence.NotasDao;
 
@@ -23,7 +25,19 @@ public class NotasServlet  extends HttpServlet{
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doPost(request, response);
+		try {
+			INotas ndao = new NotasDao();
+			List<NotaFinal> lista = ndao.listaNotas(Integer.parseInt(request.getParameter("codigo_disciplina")));
+			request.setAttribute("lista", lista);
+			request.getRequestDispatcher("NotasFinais.jsp").forward(request, response);
+
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -55,7 +69,6 @@ public class NotasServlet  extends HttpServlet{
 		}
 		//listar as notas dos alunos
 		request.getRequestDispatcher("Notas.jsp").forward(request, response);
-		System.out.println("doPost");
 	}
 
 }

@@ -38,7 +38,7 @@ public class FaltasDao implements IFaltas {
 	}
 
 	@Override
-	public List<FaltaFinal> listaNotas(int codigo_disciplina, int qtdAulasDia)
+	public List<FaltaFinal> listaFaltas(int codigo_disciplina, int qtdAulasDia)
 			throws SQLException {
 		List<FaltaFinal> listaFaltas = new ArrayList<FaltaFinal>();
 		String sqlFn = "SELECT * FROM fn_presencas(?,?)";
