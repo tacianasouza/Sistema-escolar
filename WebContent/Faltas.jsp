@@ -22,27 +22,31 @@
 				<tbody>
 					<tr>
 						<td>Ra do Aluno</td>
-						<td><input type="text" name="ra_aluno" required></td>
+						<td><input type="text" name="ra_aluno" required
+							placeholder="ra do aluno"></td>
 					</tr>
 					<tr>
 						<td>Codigo da disciplina</td>
-						<td><input type="text" name="codigo_disciplina" required></td>
+						<td><input type="text" name="codigo_disciplina" required
+							placeholder="codigo da disciplina"></td>
 					</tr>
 					<tr>
 						<td>Data da Falta</td>
-						<td><input type="text" name="dataFalta" required></td>
+						<td><input type="text" name="dataFalta" required
+							placeholder="data da falta"></td>
 					</tr>
 					<tr>
 						<td>Quantidade de Presencas</td>
-						<td><input type="text" name="presenca" required></td>
-					</tr>
-					<tr>
-						<td colspan="2"><input type="submit" name="inserir"
-							value="Inserir"></td>
+						<td><input type="text" name="presenca" required
+							placeholder="quantidade presencas"></td>
 					</tr>
 				</tbody>
 			</table>
 		</form>
+	</div>
+
+	<div id="button" align="center">
+		<input type="submit" name="inserir faltas" value="Inserir faltas">
 	</div>
 </body>
 </html>

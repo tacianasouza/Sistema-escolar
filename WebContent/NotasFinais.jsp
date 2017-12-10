@@ -3,6 +3,13 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page import="java.util.List"%>
+
+<%--
+	Document: Notas e faltas
+	Created on: 30/11/2017
+	Author: Taciana Souza
+ --%>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -12,13 +19,32 @@
 	<%
 		List<NotaFinal> lista = (List<NotaFinal>) request.getAttribute("lista");
 	%>
-	<form action="insertnotas" method="get">
-		<label for="codigo_disciplina">Código da Disciplina:</label><br>
-		<input type="text" name="codigo_disciplina" required> <input
-			type="submit" value="carregar">
-	</form>
-	<div id="ListaNotas" align="center">
-		<table border="1">
+	<div id="campoNotas" align="center">
+		<form action="insertnotas" method="get">
+			<table>
+				<thead>
+					<tr>
+						<th colspan="2">Notas Finais</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Código da Disciplina:</td>
+						<td><input type="text" name="codigo_disciplina"
+							placeholder="codigo da disciplina" required></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+
+	<div id="button" align="center">
+		<input type="submit" name="listar notas" value="Listar notas">
+	</div>
+
+	<br><div id="ListaNotas" align="center"></br>
+		<table border="1" bordercolor="green">
 			<th>RA do Aluno</th>
 			<th>Nome do Aluno</th>
 			<th>N1</th>
@@ -28,7 +54,7 @@
 			<th>Exame</th>
 			<th>Media Final</th>
 			<th>Situacao</th>
-			
+
 			<c:forEach var="nf" items="<%=lista%>">
 				<tr>
 					<td>${nf.ra_aluno}</td>

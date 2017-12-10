@@ -22,27 +22,32 @@
 				<tbody>
 					<tr>
 						<td>Ra do Aluno</td>
-						<td><input type="text" name="ra_aluno" required></td>
+						<td><input type="text" name="ra_aluno"
+							placeholder="ra do aluno" required></td>
 					</tr>
 					<tr>
 						<td>Codigo da disciplina</td>
-						<td><input type="text" name="codigo_disciplina" required></td>
+						<td><input type="text" name="codigo_disciplina"
+							placeholder="codigo da disciplina" required></td>
 					</tr>
 					<tr>
 						<td>Codigo da Avaliacao</td>
-						<td><input type="text" name="codigo_avaliacao" required></td>
+						<td><input type="text" name="codigo_avaliacao"
+							placeholder="codigo da avaliacao" required></td>
 					</tr>
 					<tr>
 						<td>Nota</td>
-						<td><input type="text" name="nota" required></td>
-					</tr>
-					<tr>
-						<td colspan="2"><input type="submit" name="inserir"
-							value="Inserir"></td>
+						<td><input type="text" name="nota"
+							placeholder="nota do aluno" required></td>
 					</tr>
 				</tbody>
 			</table>
 		</form>
 	</div>
+
+	<div id="button" align="center">
+		<input type="submit" name="inserir notas" value="Inserir notas">
+	</div>
+
 </body>
 </html>

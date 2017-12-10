@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/relatorio")
-public class RelatorioServlet extends HttpServlet {
+@WebServlet("/relatorioNota")
+public class RelatorioNotaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public RelatorioServlet() {
+	public RelatorioNotaServlet() {
 		super();
 	}
 
@@ -21,10 +21,10 @@ public class RelatorioServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		geraRelatorio(request, response);
+		geraRelatorioNota(request, response);
 	}
 
-	private void geraRelatorio(HttpServletRequest request, HttpServletResponse response)
+	private void geraRelatorioNota(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.getRequestDispatcher("RelatorioNota.jsp").forward(request, response);
 	}

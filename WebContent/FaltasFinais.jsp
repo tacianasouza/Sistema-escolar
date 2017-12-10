@@ -3,6 +3,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page import="java.util.List"%>
 <%@page import="src.br.com.model.FaltaFinal"%>
+
+<%--
+	Document: Notas e faltas
+	Created on: 30/11/2017
+	Author: Taciana Souza
+ --%>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -12,14 +19,38 @@
 	<%
 		List<FaltaFinal> lista = (List<FaltaFinal>) request.getAttribute("lista");
 	%>
-	<form action="insertfaltas" method="get">
-		<label for="codigo_disciplina">Código da Disciplina:</label><br>
-		<label for="codigo_disciplina">Quantidade de presenca:</label><br>
-		<input type="text" name="codigo_disciplina" required>  
-		<input type="text" name="qtdAulasDia" required> 
-		<input type="submit" value="carregar">
-	</form>
-	<div id="ListaFaltas" align="center">
+
+	<div id="campoFaltas" align="center">
+		<form action="insertfaltas" method="get">
+			<table>
+				<thead>
+					<tr>
+						<th colspan="2">Faltas Finais</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Código da Disciplina:</td>
+						<td><input type="text" name="codigo_disciplina"
+							placeholder="codigo da disciplina" required></td>
+					</tr>
+
+					<tr>
+						<td>Quantidade de presenca:</td>
+						<td><input type="text" name="qtdAulasDia"
+							placeholder="quantidade de presencas" required></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+
+	<div id="button" align="center">
+		<input type="submit" name="listar faltas" value="listar faltas">
+	</div>
+
+	<br><div id="ListaFaltas" align="center"></br>
 		<table border="1">
 			<th>RA do Aluno</th>
 			<th>Nome do Aluno</th>

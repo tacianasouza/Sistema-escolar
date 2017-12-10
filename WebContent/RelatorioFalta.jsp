@@ -12,17 +12,23 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Relatorio Notas</title>
+<title>Relatorio Faltas</title>
 </head>
 <body>
-	<div id="relatorioNotas" align="center">
-		<form action="relatorioNota" method="post">
+	<div id="relatorioFaltas" align="center">
+		<form action=relatorioFalta method="post">
 			<table>
 				<tbody>
 					<tr>
 						<td>Codigo da disciplina</td>
 						<td><input type="text" name="codigo_disciplina"
 							placeholder="codigo da disciplina" required></td>
+					</tr>
+
+					<tr>
+						<td>Quantidade de presencas</td>
+						<td><input type="text" name=qtdAulasDia
+							placeholder="quantidade de presencas" required></td>
 					</tr>
 			</table>
 		</form>
